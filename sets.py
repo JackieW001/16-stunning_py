@@ -5,7 +5,8 @@ print "s1: ",s1
 print "s2: ",s2
 
 def union(s1, s2):
-    union = [x for x in s1] + [x for x in s2 if x not in s1]
+    union = []
+    [union.append(y) for z in [x for x in s1, s2] for y in z if not y in union]
     print "UNION: ",union
     return union
 union(s1, s2)
